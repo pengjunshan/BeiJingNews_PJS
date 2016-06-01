@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+
+    <RadioGroup
+        android:id="@+id/rg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@drawable/bottom_tab_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_marginLeft="15dp"
+            android:id="@+id/rb_home"
+            style="@style/bottom_rg"
+            android:drawableTop="@drawable/rb_home_seletor"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rb_news"
+            style="@style/bottom_rg"
+            android:drawableTop="@drawable/rb_news_seletor"
+            android:text="新闻" />
+
+        <RadioButton
+            android:id="@+id/rb_shopping"
+            style="@style/bottom_rg"
+            android:drawableTop="@drawable/shopping_seletor"
+            android:text="购物车" />
+
+        <RadioButton
+            android:id="@+id/rb_pay"
+            style="@style/bottom_rg"
+            android:drawableTop="@drawable/rb_pay_seletor"
+            android:text="支付" />
+
+        <RadioButton
+            android:layout_marginRight="15dp"
+            android:id="@+id/rb_seting"
+            style="@style/bottom_rg"
+            android:drawableTop="@drawable/rb_seting_seletor"
+            android:text="设置" />
+
+    </RadioGroup>
+</LinearLayout>
