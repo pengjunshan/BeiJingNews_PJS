@@ -1,4 +1,4 @@
-package beijingnews_pjs.pjs.com.beijingnews_pjs.fragment;
+package beijingnews_pjs.pjs.com.beijingnews_pjs.base;
 
 import android.content.Context;
 import android.os.Bundle;
