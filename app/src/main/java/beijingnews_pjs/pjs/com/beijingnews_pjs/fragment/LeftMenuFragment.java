@@ -16,23 +16,23 @@ import java.util.List;
 
 import beijingnews_pjs.pjs.com.beijingnews_pjs.R;
 import beijingnews_pjs.pjs.com.beijingnews_pjs.activity.MainActivity;
-import beijingnews_pjs.pjs.com.beijingnews_pjs.base;
+import beijingnews_pjs.pjs.com.beijingnews_pjs.base.BaseFragment;
 import beijingnews_pjs.pjs.com.beijingnews_pjs.bean.LeftMenuBean;
 import beijingnews_pjs.pjs.com.beijingnews_pjs.pager.NewsPager;
 
 /**
  * Created by pjs984312808 on 2016/6/1.
  */
-public class LeftMenuFragment extends base.BaseFragment {
+public class LeftMenuFragment extends BaseFragment{
 
     private ListView listView;
     private MyAdapter adapter;
 
     private int menuPosition = 0;
 
-    /**
-     * 得到数据
-     */
+//    *
+//     * 得到数据
+//
     private List<LeftMenuBean.DataBean> leftMenuBeanData;
 
     @Override
@@ -71,9 +71,9 @@ public class LeftMenuFragment extends base.BaseFragment {
                 menuPosition = position;
                 adapter.notifyDataSetChanged();
 
-                /**
-                 * 获取SlidingMenu对象
-                 */
+//                *
+//                 * 获取SlidingMenu对象
+
                 MainActivity main = (MainActivity) context;
                 SlidingMenu menu = main.getSlidingMenu();
                 menu.toggle();

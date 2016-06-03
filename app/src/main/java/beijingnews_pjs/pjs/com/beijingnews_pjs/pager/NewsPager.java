@@ -14,7 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import beijingnews_pjs.pjs.com.beijingnews_pjs.activity.MainActivity;
-import beijingnews_pjs.pjs.com.beijingnews_pjs.base;
+import beijingnews_pjs.pjs.com.beijingnews_pjs.base.BasePager;
+import beijingnews_pjs.pjs.com.beijingnews_pjs.base.MenuPager;
 import beijingnews_pjs.pjs.com.beijingnews_pjs.bean.LeftMenuBean;
 import beijingnews_pjs.pjs.com.beijingnews_pjs.fragment.LeftMenuFragment;
 import beijingnews_pjs.pjs.com.beijingnews_pjs.menudatail.InteracMenuDetailPager;
@@ -27,12 +28,12 @@ import beijingnews_pjs.pjs.com.beijingnews_pjs.utils.URL;
 /**
  * Created by pjs984312808 on 2016/6/3.
  */
-public class NewsPager extends base.BasePager {
+public class NewsPager extends BasePager {
 
     //左菜单请求到的数据集合
-    private  List<LeftMenuBean.DataBean> leftMenuBeanData;
+    private List<LeftMenuBean.DataBean> leftMenuBeanData;
 
-    private List<base.MenuPager> menuList;
+    private List<MenuPager> menuList;
 
     public NewsPager(Context context) {
         super(context);
@@ -49,9 +50,9 @@ public class NewsPager extends base.BasePager {
         menuList.add(new PhotosMenuDetailPager(context));
         menuList.add(new InteracMenuDetailPager(context));
 
-        /**
-         * 监听菜单按钮
-         */
+//        *//**
+//         * 监听菜单按钮
+//         *//*
         ib_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,10 +93,10 @@ public class NewsPager extends base.BasePager {
         });
     }
 
-    /**
-     * 处理Json
-     * @param json
-     */
+//    *//**
+//     * 处理Json
+//     * @param json
+//     *//*
     private void percessData(String json) {
         LeftMenuBean leftMenuBean = parseJson(json);
 
@@ -108,10 +109,10 @@ public class NewsPager extends base.BasePager {
         leftFragment.setData(leftMenuBeanData);
     }
 
-    /**
-     * 解析数据
-     * @param json
-     */
+//    *//**
+//     * 解析数据
+//     * @param json
+//     *//*
     private LeftMenuBean parseJson(String json) {
         Gson gson=new Gson();
         LeftMenuBean leftMenuBean = gson.fromJson(json, LeftMenuBean.class);
@@ -125,7 +126,7 @@ public class NewsPager extends base.BasePager {
         tv_title.setText(leftMenuBeanData.get(position).getTitle());
 
         //根据position创建子类实例
-        base.MenuPager menuPager = menuList.get(position);
+        MenuPager menuPager = menuList.get(position);
         //移除所有的布局
         fl_content_basepager.removeAllViews();
         //初始化数据

@@ -17,7 +17,7 @@ import java.util.List;
 
 import beijingnews_pjs.pjs.com.beijingnews_pjs.R;
 import beijingnews_pjs.pjs.com.beijingnews_pjs.activity.MainActivity;
-import beijingnews_pjs.pjs.com.beijingnews_pjs.base;
+import beijingnews_pjs.pjs.com.beijingnews_pjs.base.BaseFragment;
 import beijingnews_pjs.pjs.com.beijingnews_pjs.base.BasePager;
 import beijingnews_pjs.pjs.com.beijingnews_pjs.pager.HomePager;
 import beijingnews_pjs.pjs.com.beijingnews_pjs.pager.NewsPager;
@@ -29,7 +29,7 @@ import beijingnews_pjs.pjs.com.beijingnews_pjs.view.NoScollViewPager;
 /**
  * Created by pjs984312808 on 2016/6/1.
  */
-public class ContentFragment extends base.BaseFragment {
+public class ContentFragment extends BaseFragment {
 
     @ViewInject(R.id.viewpager)
     private NoScollViewPager viewpager;
@@ -89,11 +89,11 @@ public class ContentFragment extends base.BaseFragment {
         slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
 
     }
-
-    /**
-     * 得到第二项view NewsPager
-     * @return
-     */
+//
+//    *
+//     * 得到第二项view NewsPager
+//     * @return
+//
     public NewsPager getNewsPager() {
         BasePager basePager = pagerList.get(1);
         return (NewsPager) basePager;
@@ -185,6 +185,5 @@ public class ContentFragment extends base.BaseFragment {
             return view;
         }
     }
-
 
 }
