@@ -37,10 +37,61 @@ public class SPUtil {
      * 保存左菜单的json数据
      * @param context
      */
-    public static void saveLeftMenuJson(Context context, String key, String values) {
+    public static void saveJsonString(Context context, String key, String values) {
         SharedPreferences sp=context.getSharedPreferences("atguigu",Context.MODE_PRIVATE);
         sp.edit().putString(key,values).commit();
     }
 
 
+    /**
+     * 获取json缓存
+     * @param context
+     * @param key
+     */
+    public static String getJsonString(Context context, String key) {
+        SharedPreferences sp=context.getSharedPreferences("atguigu",Context.MODE_PRIVATE);
+        return sp.getString(key,"");
+    }
+
+    /**
+     * 保存刷新时间
+     * @param contenxt
+     * @param key
+     * @param vlues
+     */
+    public static void saveRefreshTime(Context contenxt, String key, String vlues) {
+        SharedPreferences sp=contenxt.getSharedPreferences("atguigu",Context.MODE_PRIVATE);
+        sp.edit().putString(key,vlues).commit();
+    }
+    /**
+     * 获取上次刷新时间
+     * @param contenxt
+     * @param key
+     */
+    public static String getRefreshTime(Context contenxt, String key) {
+        SharedPreferences sp=contenxt.getSharedPreferences("atguigu",Context.MODE_PRIVATE);
+        return sp.getString(key,"");
+    }
+
+    /**
+     * 获取浏览过的信息的id集合
+     * @param context
+     * @param key
+     * @return
+     */
+    public static String getBrowsedId(Context context, String key) {
+
+        SharedPreferences sp=context.getSharedPreferences("atguigu",Context.MODE_PRIVATE);
+        return sp.getString(key,"");
+    }
+
+
+    /**
+     * 保存浏览过的信息的id
+     * @param context
+     */
+    public static void saveBrowsedId(Context context, String key, String id) {
+        SharedPreferences sp= context.getSharedPreferences("atguigu",Context.MODE_PRIVATE);
+        sp.edit().putString(key,id).commit();
+    }
 }

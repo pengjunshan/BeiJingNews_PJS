@@ -6,12 +6,12 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
-import beijingnews_pjs.pjs.com.beijingnews_pjs.base.MenuPager;
+import beijingnews_pjs.pjs.com.beijingnews_pjs.base.MenuDetailBasePager;
 
 /**
  * Created by pjs984312808 on 2016/6/3.
  */
-public class InteracMenuDetailPager extends MenuPager {
+public class InteracMenuDetailPager extends MenuDetailBasePager {
 
     private TextView textView;
 

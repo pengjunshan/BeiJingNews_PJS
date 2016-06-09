@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "beijingnews_pjs.pjs.com.beijingnews_pjs"
-        minSdkVersion 19
+        minSdkVersion 17
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -26,4 +26,10 @@ dependencies {
     compile project(':SlidingMenu_library')
     compile project(':xutils_library')
     compile files('libs/gson-2.2.4.jar')
+    compile project(':ViewPagerIndicator_library')
+    compile files('libs/glide-3.7.0.jar')
+    compile project(':PullToRefresh_library')
+    compile files('libs/volley.jar')
+    compile 'com.android.support:design:23.3.0'
+    compile files('libs/jpush-android-2.1.5.jar')
 }

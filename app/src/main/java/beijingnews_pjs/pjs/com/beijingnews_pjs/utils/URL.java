@@ -5,11 +5,19 @@ package beijingnews_pjs.pjs.com.beijingnews_pjs.utils;
  */
 public class URL {
 
-    //本地的模拟器，访问本地电脑服务器
-    public static final String BASE_URL = "http://192.168.10.53:8080/zhbj";
+//    public static final String BASE_URL = "http://192.168.3.104:8080/zhbj";
+    public static final String BASE_URL = "http://192.168.3.104:8080/zhbj";
 
+    //本地的模拟器，访问本地电脑服务器
     /**
      * 新闻中心的连接地址
      */
     public static final String NEWSCENTER_URL = BASE_URL + "/categories.json";
+
+    /**
+     * 图组的数据
+     */
+    public static final String PHOTOS_URL = BASE_URL + "/photos/photos_1.json";
+
+
 }

@@ -5,6 +5,9 @@ import android.app.Application;
 import org.xutils.BuildConfig;
 import org.xutils.x;
 
+import beijingnews_pjs.pjs.com.beijingnews_pjs.volley.VolleyManager;
+import cn.jpush.android.api.JPushInterface;
+
 /**
  * Created by pjs984312808 on 2016/6/1.
  */
@@ -17,5 +20,14 @@ public class MyAppliction extends Application {
         //初始化xutils
         x.Ext.init(this);
         x.Ext.setDebug(BuildConfig.DEBUG);
+
+        //初始化Volley
+//        Volley.newRequestQueue(this);
+        VolleyManager.init(this);
+
+
+        //注册极光推送
+        JPushInterface.setDebugMode(true); 	// 设置开启日志,发布时请关闭日志
+        JPushInterface.init(this);     		// 初始化 JPush
     }
 }

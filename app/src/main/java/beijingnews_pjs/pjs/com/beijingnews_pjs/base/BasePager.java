@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.xutils.view.annotation.ViewInject;
@@ -16,6 +17,12 @@ import beijingnews_pjs.pjs.com.beijingnews_pjs.R;
  */
 public class BasePager {
 
+
+    /**
+     * listview和gridview交换按钮
+     */
+    @ViewInject(R.id.iv_list_grid)
+    public ImageView iv_list_grid;
     //上下文
     public Context context;
 
