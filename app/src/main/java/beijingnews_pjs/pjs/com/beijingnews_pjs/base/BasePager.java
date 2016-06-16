@@ -2,6 +2,7 @@ package beijingnews_pjs.pjs.com.beijingnews_pjs.base;
 
 import android.content.Context;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -23,6 +24,9 @@ public class BasePager {
      */
     @ViewInject(R.id.iv_list_grid)
     public ImageView iv_list_grid;
+
+    @ViewInject(R.id.btn_edite)
+    public Button btn_edite;
     //上下文
     public Context context;
 

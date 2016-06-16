@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_margin="6dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/my1"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I Miss You"
+        android:gravity="center"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:background="#22000000"
+        />
+
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+         android:background="@drawable/divider_bg"
+        ></View>-->
+</LinearLayout>
