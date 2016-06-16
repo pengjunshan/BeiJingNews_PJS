@@ -21,7 +21,7 @@ public class NumberAddSubView extends LinearLayout implements View.OnClickListen
 
     private int value=1;
     private int minValue=1;
-    private int maxValue=10;
+    public static int maxValue=10;
 
     public int getValue() {
        String val=tv_num.getText().toString();

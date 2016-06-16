@@ -52,7 +52,12 @@ public class PayPagerAdapter extends RecyclerView.Adapter<PayPagerAdapter.MyView
         holder.checkbox.setChecked(shoppingCart.isChecked());
         holder.tv_name.setText(shoppingCart.getName());
         holder.tv_price.setText(shoppingCart.getPrice() + "");
-        holder.numberAddSubView.setValue(shoppingCart.getCount());
+
+       int count = shoppingCart.getCount();
+        if(count>NumberAddSubView.maxValue) {
+            count=NumberAddSubView.maxValue;
+        }
+        holder.numberAddSubView.setValue(count);
 
         //使用Glide请求图片
         Glide.with(context).load(shoppingCart.getImgUrl())
