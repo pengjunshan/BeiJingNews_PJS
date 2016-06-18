@@ -1,4 +1,5 @@
-include ':app', ':SlidingMenu_library', ':xutils_library', ':baidudu', ':xUtils3-sample', ':okhttputils', ':sample-okhttp', ':RecyclerViewDemo', ':recyclerviewtext', ':SwipeRefreshLayoutDemo', ':NumberAddSubView', ':MaterialRefreshLayout_library', ':MaterialRefreshLayout'
+include ':app', ':SlidingMenu_library', ':xutils_library', ':baidudu', ':okhttputils', ':sample-okhttp', ':RecyclerViewDemo', ':recyclerviewtext', ':SwipeRefreshLayoutDemo', ':NumberAddSubView', ':MaterialRefreshLayout_library', ':MaterialRefreshLayout', ':umengshare', ':social_sdk_library_project', ':easemob', ':easemob', ':easeui'
 include ':ViewPagerIndicator_library'
 include ':PullToRefresh_library'
 include ':alipay_demo'
+include ':social_sdk_example'

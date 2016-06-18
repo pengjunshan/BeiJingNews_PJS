@@ -26,14 +26,16 @@ import beijingnews_pjs.pjs.com.beijingnews_pjs.view.NumberAddSubView;
 public class PayPagerAdapter extends RecyclerView.Adapter<PayPagerAdapter.MyViewHolder> {
 
     private final Context context;
+    private final CheckBox checkboxall;
     private List<ShoppingCart> payDatas;
     private final TextView totalprice;
     private CartProvider cartProvider;
 
-    public PayPagerAdapter(Context context, List<ShoppingCart> payDatas, TextView totalprice) {
+    public PayPagerAdapter(Context context, List<ShoppingCart> payDatas, TextView totalprice, CheckBox checkbox_all) {
         this.context = context;
         this.payDatas = payDatas;
         this.totalprice = totalprice;
+        this.checkboxall = checkbox_all;
         cartProvider = new CartProvider(context);
 
         totalPrice();
@@ -53,9 +55,9 @@ public class PayPagerAdapter extends RecyclerView.Adapter<PayPagerAdapter.MyView
         holder.tv_name.setText(shoppingCart.getName());
         holder.tv_price.setText(shoppingCart.getPrice() + "");
 
-       int count = shoppingCart.getCount();
-        if(count>NumberAddSubView.maxValue) {
-            count=NumberAddSubView.maxValue;
+        int count = shoppingCart.getCount();
+        if (count > NumberAddSubView.maxValue) {
+            count = NumberAddSubView.maxValue;
         }
         holder.numberAddSubView.setValue(count);
 
@@ -120,8 +122,31 @@ public class PayPagerAdapter extends RecyclerView.Adapter<PayPagerAdapter.MyView
     public void setItemisCheck(int position, boolean isCheck) {
         payDatas.get(position).setChecked(isCheck);
         totalPrice();
+        int num = 0;
+        if (payDatas != null && payDatas.size() > 0) {
+
+            for (int i = 0; i < payDatas.size(); i++) {
+                ShoppingCart cart = payDatas.get(i);
+                //只要有一个没有被选中就把全选设置为未勾选
+                if (!cart.isChecked()) {
+                    checkboxall.setChecked(false);
+                } else {
+                    num += 1;
+                }
+            }
+            /**
+             * 当选中的个数和集合相等时设置全选
+             */
+            if (payDatas.size() == num) {
+                checkboxall.setChecked(true);
+            }
+        }
+//        checkboxall.setChecked(checkboxall.isChecked());
+
         notifyItemChanged(position);
+
     }
+
 
     /**
      * 计算所有的商品价格总价
@@ -154,9 +179,9 @@ public class PayPagerAdapter extends RecyclerView.Adapter<PayPagerAdapter.MyView
 
             }*/
 
-            for(Iterator iterator = payDatas.iterator(); iterator.hasNext();){
+            for (Iterator iterator = payDatas.iterator(); iterator.hasNext(); ) {
                 ShoppingCart cart = (ShoppingCart) iterator.next();
-                if(cart.isChecked()){
+                if (cart.isChecked()) {
                     int position = payDatas.indexOf(cart);
                     iterator.remove();//移除数据
 

@@ -163,7 +163,7 @@ public class PayPager extends BasePager {
         CartProvider cartProvider = new CartProvider(context);
         payDatas = cartProvider.getAllData();
 
-        adapter = new PayPagerAdapter(context, payDatas,tv_total_price);
+        adapter = new PayPagerAdapter(context, payDatas,tv_total_price,checkbox_all);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
 
@@ -234,6 +234,14 @@ public class PayPager extends BasePager {
 
             }
         });
+
+      /*  checkbox_all.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                adapter.setCheckBoxAll(isChecked);
+            }
+        });*/
 
         /**
          * 点击全选 非全选
