@@ -21,7 +21,7 @@ public class MainActivity extends SlidingFragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ac = this;
+              ac = this;
 
         //设置主界面
         setContentView(R.layout.fragment_content);

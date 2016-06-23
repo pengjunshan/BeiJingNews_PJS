@@ -123,6 +123,7 @@ public class ContentFragment extends BaseFragment {
         public void onCheckedChanged(RadioGroup group, int checkedId) {
             switch (checkedId) {
                 case R.id.rb_home:
+                    //设置false没有动画
                     viewpager.setCurrentItem(0, false);
                     slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
                     break;

@@ -75,7 +75,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     /**
      * 注册账号
      *北京市通州区北苑街道68号c座京贸国际公寓
-     * 
+     *
      * @param mUserName
      * @param mUserPwd
      */
